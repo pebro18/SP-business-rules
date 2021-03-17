@@ -1,3 +1,4 @@
+from Rules.reuseableSQL import ReuseSQL
 """
 pseudocode for content filtering
 
@@ -15,3 +16,24 @@ pseudocode for content filtering
 5. recommendations geven
 
 """
+
+class ContentRules():
+
+    SQL_Commands = ["SELECT idproducts, name ,brand, category, price,doelgroep,target FROM products ORDER BY category ASC;",
+                    "SELECT products_idproducts FROM {} o JOIN sessions s on s.idsessions = o.sessions_idsessions WHERE s.idsessions = {};",
+                    "INSERT INTO similars VALUES ({},{});"]
+
+    def ContentFiltering(self):
+         
+        pass
+    pass
+
+
+
+   
+
+
+
+
+
+
