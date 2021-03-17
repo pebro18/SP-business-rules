@@ -15,18 +15,15 @@ class ReuseSQL():
         cur.close()
         con.close()
 
-    def SQL_Select(self,columm, table):
-
-        sqlstring = "SELECT {} ".format()
-        con = OpenConnection()
+    def SQL_Select(self,sqlstring):
+        con = self.OpenConnection()
         cur = con.cursor()
         cur.execute(sqlstring)
-
         rows = cur.fetchall()
+        self.CloseConnection
         return rows
 
-    def SQL_Insert(self,table,data):
-        sqlstring = "".format()
+    def SQL_Insert(self,sqlstring):
         con = OpenConnection()
         cur = con.cursor()
         cur.execute(sqlstring)
