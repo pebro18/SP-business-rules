@@ -22,6 +22,8 @@ voor deze regel moet je content_rules.py runnen
 #### resultaat van content rule
 ![afbeelding](https://user-images.githubusercontent.com/35180025/111662977-ac823200-8810-11eb-8746-9d261fea31d2.png)
 
+### uitleg content rule
+
 ### Run collab filter rule
 voor deze regel moet je collab_rules
 
