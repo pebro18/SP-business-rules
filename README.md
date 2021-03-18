@@ -10,10 +10,11 @@ prerequities:
 1. verbonden met mongodb met een db genaam huwebshop die gevult is met sessions, products en visitors
 2. database.ini aanmaken in het project map met deze info er in:
 ![afbeelding](https://user-images.githubusercontent.com/35180025/111664177-ccfebc00-8811-11eb-994a-a407041a08fa.png)
-
 3. als de DB niet bestaat commenteer de drop_database functie in main.py
+4. dan alleen main.py runnen
 
-dan alleen main.py runnen
+### uitleg content rule
+de content rule werkt zo dat voor elke unique catogorie alle producten pakt van dezelfde categorie en ze samen linkt in de similarproducts table
 
 ### Run content filter rule
 voor deze regel moet je content_rules.py runnen
