@@ -1,12 +1,12 @@
-import psycopg2
 from _functions.config import config
+import psycopg2
 
-
-
-class ReuseSQL():
+class ReuseSQL:
     
+    def __init__(self):
+        pass
 
-    def OpenConnection(self):
+    def openconnection(self):
         db = config()
         con = psycopg2.connect(**db)
         return con
@@ -16,7 +16,7 @@ class ReuseSQL():
         con.close()
 
     def SQL_Select(self,sqlstring):
-        con = self.OpenConnection()
+        con = self.openconnection()
         cur = con.cursor()
         cur.execute(sqlstring)
         rows = cur.fetchall()
@@ -24,12 +24,14 @@ class ReuseSQL():
         return rows
 
     def SQL_Insert(self,sqlstring):
-        con = OpenConnection()
+        con = self.openconnection()
         cur = con.cursor()
-        cur.execute(sqlstring)
+        try:
+            cur.execute(sqlstring)
+        except:
+            pass
         con.commit()
-        CloseConnection(con,cur)
+        self.CloseConnection(con,cur)
         pass
-    
-    
+       
     pass

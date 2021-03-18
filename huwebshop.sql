@@ -46,6 +46,18 @@ CREATE TABLE IF NOT EXISTS Visitors (
   PRIMARY KEY (idVisitors))
 ;
 
+DROP TABLE IF EXISTS similarproduct CASCADE ;
+
+CREATE TABLE IF NOT EXISTS similarsproduct (
+    Products_idProducts VARCHAR(255) NOT NULL,
+    similarsproduct VARCHAR(255) NOT NULL,
+    CONSTRAINT fk_events_Products1
+        FOREIGN KEY (Products_idProducts)
+        REFERENCES Products (idProducts))
+;
+
+
+
 -- -----------------------------------------------------
 -- Table HUWebshop.Sessions
 -- -----------------------------------------------------
