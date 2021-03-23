@@ -18,9 +18,7 @@ pseudocode for collab filtering
 
 
 class CollabRule():
-
-
-    
+   
     def Collabritieve_Filter():
         SQL_Commands = ["SELECT idvisitors, typevisitors FROM visitors;",
                         "SELECT COUNT(idvisitors), typevisitors FROM visitors GROUP BY typevisitors ORDER BY typevisitors ASC;"
@@ -49,5 +47,5 @@ class CollabRule():
 
         pass
 
-TestOBJ=CollabRule()
-TestOBJ.Collabritieve_Filter()
+CollabObj=CollabRule()
+CollabObj.Collabritieve_Filter()

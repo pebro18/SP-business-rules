@@ -33,5 +33,13 @@ class ReuseSQL:
         con.commit()
         self.CloseConnection(con,cur)
         pass
+
+    def SQL_InsertMany(self,sql):
+        con = self.openconnection()
+        cur = con.cursor()
+        cur.executemany()
+        con.commit()
+        self.CloseConnection()
+        pass
        
     pass

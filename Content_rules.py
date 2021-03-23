@@ -53,8 +53,8 @@ class ContentRules:
     pass
 
 
-TestOBJ=ContentRules()
-TestOBJ.ContentFiltering()
+ContentOBJ=ContentRules()
+ContentOBJ.ContentFiltering()
    
 
 
