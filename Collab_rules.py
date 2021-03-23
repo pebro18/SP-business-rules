@@ -37,9 +37,7 @@ class CollabRule():
             
             additional = ["orders"]
             order_data = SQLObj.SQL_Select(SQL_Commands[2].format(*additional))
-
             pass
-
 
         for data in visitor_data:
             for product in []:
@@ -51,4 +49,5 @@ class CollabRule():
 
         pass
 
-    Collabritieve_Filter()
+TestOBJ=CollabRule()
+TestOBJ.Collabritieve_Filter()
